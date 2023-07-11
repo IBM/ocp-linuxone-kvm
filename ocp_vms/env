@@ -1,0 +1,33 @@
+#/bin/bash
+# Definition of all environmental variables used by the 
+# 1-make-boostrap.sh 2-make-master-vms.sh 3-make-worker-vms.sh scripts 
+
+CLUSTER_NAME="kvm1"
+HOST_IP="<ip_address_bastion>"
+WEB_PORT="8088"
+LOCATION="http://${HOST_IP}:${WEB_PORT}"
+VIR_NET="macvtap-net"
+DOMAIN="user1.local"
+VIRT_IMAGE_DIR="/var/lib/libvirt/images"
+
+KERNEL="kernel"
+INITRAMFS="initramfs"
+ROOTFS="rootfs.img"
+
+DEFAULT_GW="<ip_address_network_gateway>"
+SUBNET_MASK="<netmast>"
+BOOTSTRAP_IP="<ip_address_bootstrap>"
+BOOTSTRAP_HOSTNAME="bootstrap"
+NAMESERVER="<ip_address_bastion>"
+MASTER1_IP="<ip_address_master1>"
+MASTER1_HOSTNAME="master1"
+MASTER2_IP="<ip_address_master2>"
+MASTER2_HOSTNAME="master2"
+MASTER3_IP="<ip_address_master3>"
+MASTER3_HOSTNAME="master3"
+WORKER1_IP="<ip_address_worker1>"
+WORKER1_HOSTNAME="worker1"
+WORKER2_IP="<ip_address_worker2>"
+WORKER2_HOSTNAME="worker2"
+WORKER3_IP="<ip_address_worker3>"
+WORKER3_HOSTNAME="worker3"

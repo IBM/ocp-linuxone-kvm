@@ -1,0 +1,30 @@
+$TTL 86400
+@ IN SOA user1bastion.user1.local. admin.user1.local. (
+                                     2020011801 ;Serial
+                                           3600 ;Refresh
+                                           1800 ;Retry
+                                         604800 ;Expire
+                                          86400 ;Minimum TTL
+)
+
+;Name Server Information
+@ IN NS user1bastion.user1.local.
+
+;IP Address for Name Server
+user1bastion.user1.local. IN A <ip_address_bastion>>
+
+; OCP cluster masters
+bootstrap.kvm1.user1.local. IN A <ip_address_bootstrap>
+master1.kvm1.user1.local. IN A <ip_address_master1>
+master2.kvm1.user1.local. IN A <ip_address_master2>
+master3.kvm1.user1.local. IN A <ip_address_master3>
+
+; OCP cluster workers
+worker1.kvm1.user1.local. IN A <ip_address_worker1>
+worker2.kvm1.user1.local. IN A <ip_address_worker2>
+worker3.kvm1.user1.local. IN A <ip_address_worker3>
+
+; OCP cluster specifics
+*.apps.kvm1.user1.local. IN A <ip_address_bastion>
+api.kvm1.user1.local. IN A <ip_address_bastion>
+api-int.kvm1.user1.local. IN A <ip_address_bastion>

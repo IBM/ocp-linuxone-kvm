@@ -1,0 +1,24 @@
+$TTL 86400
+@ IN SOA user1bastion.user1.local. admin.user1.local. (
+                                     2020011801 ;Serial
+                                           3600 ;Refresh
+                                           1800 ;Retry
+                                         604800 ;Expire
+                                          86400 ;Minimum TTL
+)
+
+@ IN NS user1bastion.user1.local.
+user1bastion.user1.local. IN A <ip_address_bastion>
+
+179 IN PTR user1bastion.user1.local.
+179 IN PTR api.kvm1.user1.local.
+179 IN PTR api-int.kvm1.user1.local.
+
+
+180 IN PTR boostrap.kvm1.user1.local.
+181 IN PTR master1.kvm1.user1.local.
+182 IN PTR master2.kvm1.user1.local.
+183 IN PTR master3.kvm1.user1.local.
+184 IN PTR worker1.kvm1.user1.local.
+185 IN PTR worker2.kvm1.user1.local.
+186 IN PTR worker3.kvm1.user1.local.
